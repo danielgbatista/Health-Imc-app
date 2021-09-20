@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:padding="15dp"
+        android:background="#e7008a"
+        >
+        <TextView
+            android:id="@+id/tv_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bowlby_one"
+            android:gravity="end"
+            android:text="HEALTH\nCALC"
+            android:textSize="30sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:id="@+id/iv_titulo"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="@id/tv_titulo"
+            android:layout_alignParentBottom="@id/tv_titulo"
+            android:src="@drawable/saude"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/wave_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:src="@drawable/wave_down_"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/rl_header"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#886E538F"
+        android:layout_below="@id/wave_bottom"
+        android:layout_above="@id/wave_up"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        >
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/wave_up"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/wave_up"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:text="Desenvolvido pela DS2T-A"
+        android:textSize="13sp"
+        android:fontFamily="@font/baloo_bhai"
+        android:textColor="@color/white"
+        />
+
+
+
+
+</RelativeLayout>
