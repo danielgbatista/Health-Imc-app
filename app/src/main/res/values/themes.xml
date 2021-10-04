@@ -2,8 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme.ImcCalcApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <!-- <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item> -->
+        <item name="colorPrimary">@color/pink_500</item>
+        <item name="colorPrimaryVariant">@color/pink_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -13,4 +16,32 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+        <!-- Formatação de texto-->
+        <style name="titulo" parent="TextAppearance.MaterialComponents.Headline1">
+            <item name="android:textSize">42sp</item>
+            <item name="android:textColor">#777575</item>
+            <item name="android:textStyle">bold</item>
+        </style>
+        <style name="sub_titulo" parent="TextAppearance.MaterialComponents.Headline6">
+            <item name="android:textSize">16sp</item>
+            <item name="android:textColor">#777575</item>
+        </style>
+        <!-- Editando button-->
+        <style name="button_login" parent="@style/Widget.MaterialComponents.Button">
+            <item name="backgroundTint">@color/pink_700</item>
+            <item name="cornerRadius">16dp</item>
+        </style>
+
+        <!-- Dashboard values -->
+        <style name="dashboard_values1" parent="TextAppearance.MaterialComponents.Headline5">
+            <item name="android:textSize">18sp</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:textColor">@color/white</item>
+        </style>
+        <style name="dashboard_values2" parent="TextAppearance.MaterialComponents.Headline6">
+            <item name="android:textSize">13sp</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:textColor">@color/white</item>
+        </style>
+
 </resources>

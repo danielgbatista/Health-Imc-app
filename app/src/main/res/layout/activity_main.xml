@@ -8,77 +8,181 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:id="@+id/rl_header"
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:padding="15dp"
-        android:background="#e7008a"
+        android:layout_alignParentEnd="true"
+        android:background="@color/pink_700"
+        android:paddingTop="10dp"
         >
+
         <TextView
             android:id="@+id/tv_titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bowlby_one"
-            android:gravity="end"
-            android:text="HEALTH\nCALC"
-            android:textSize="30sp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_marginStart="34dp"
+            android:fontFamily="@font/bowlby_one"
+            android:text="HEALTH\nCALC"
+            android:textAlignment="textEnd"
             android:textColor="@color/white"
-            />
+            android:textSize="28sp"
 
+
+            />
         <ImageView
             android:id="@+id/iv_titulo"
-            android:layout_width="95dp"
-            android:layout_height="95dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="@id/tv_titulo"
-            android:layout_alignParentBottom="@id/tv_titulo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@drawable/saude"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/tv_titulo"
+            android:layout_alignBottom="@id/tv_titulo"
+            android:layout_marginEnd="20dp"
+
             />
     </RelativeLayout>
+    <ImageView
+        android:id="@+id/wave_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/header"
+        android:src="@drawable/wave_down_"
 
+
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/wave_top"
+        android:layout_above="@+id/wave_bottom">
+        <LinearLayout
+            android:id="@+id/form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_title"
+                android:textAppearance="@style/titulo"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_subtitle"
+                android:textAppearance="@style/sub_titulo"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/login_et_email"
+                app:endIconMode="clear_text"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/login_et_senha"
+                app:passwordToggleEnabled="true"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btn_entrar"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_entrar"
+                style="@style/button_login"
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_lembrar_me"
+                android:layout_gravity="end"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_esqueci_senha"
+                android:textColor="@color/pink_500"
+                android:layout_gravity="end"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:textAllCaps="false"
+                android:gravity="end"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end|center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_n_tem_conta"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_criar_conta"
+                    android:textColor="@color/pink_500"
+                    android:layout_gravity="end"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:textAllCaps="false"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
     <ImageView
         android:id="@+id/wave_bottom"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:src="@drawable/wave_down_"
-        android:scaleType="fitXY"
-        android:layout_below="@+id/rl_header"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#886E538F"
-        android:layout_below="@id/wave_bottom"
-        android:layout_above="@id/wave_up"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        >
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/wave_up"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:src="@drawable/wave_up"
+        android:layout_height="88dp"
         android:scaleType="fitXY"
         android:layout_alignParentBottom="true"
+        android:src="@drawable/wave_up"
+
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text=" Desenvolvido por DS2T-A"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:text="Desenvolvido pela DS2T-A"
-        android:textSize="13sp"
-        android:fontFamily="@font/baloo_bhai"
         android:textColor="@color/white"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="6dp"
+        android:layout_centerInParent="true"
+
+
         />
 
 

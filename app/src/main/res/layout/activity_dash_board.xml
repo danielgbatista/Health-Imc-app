@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashBoardActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/dash_board_background"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/tim_maia"
+                android:scaleType="centerCrop"
+                />
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tim Maia"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Singer"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="25.75"
+                android:textColor="@color/white"
+                android:textAppearance="@style/dashboard_values1"
+                android:gravity="center"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/dashboard_values1"
+                android:text="1920"
+                android:gravity="center"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/dashboard_values1"
+                android:gravity="center"
+                android:text="36"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/dashboard_values1"
+                android:gravity="center"
+                android:text="91.65"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/dashboard_values1"
+                android:text="1.75"
+                android:gravity="center"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="IMC"
+                android:textAppearance="@style/dashboard_values2"
+                android:gravity="center"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="NCD"
+                android:gravity="center"
+                android:textAppearance="@style/dashboard_values2"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Idade"
+                android:textAppearance="@style/dashboard_values2"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Peso"
+                android:textAppearance="@style/dashboard_values2"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Altura"
+                android:gravity="center"
+                android:textAppearance="@style/dashboard_values2"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_peso"
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="4dp"
+                    android:src="@drawable/peso" />
+
+                <TextView
+                    android:id="@+id/txt_peso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/img_peso"
+                    android:text="Pesar agora"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_peso"
+                    android:layout_alignStart="@id/txt_peso"
+                    android:layout_marginTop="9dp"
+                    android:text="Acompanhe seu peso"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_historico"
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="4dp"
+                    android:src="@drawable/linha_do_grafico" />
+
+                <TextView
+                    android:id="@+id/txt_historico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/img_historico"
+                    android:text="Ver Histórico"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_historico"
+                    android:layout_alignStart="@id/txt_historico"
+                    android:layout_marginTop="9dp"
+                    android:text="Reveja suas conquistas"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>
