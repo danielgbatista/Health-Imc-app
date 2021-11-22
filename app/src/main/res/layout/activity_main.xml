@@ -93,6 +93,7 @@
                 >
 
                 <EditText
+                    android:id="@+id/edit_login_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -109,6 +110,7 @@
                 >
 
                 <EditText
+                    android:id="@+id/edit_login_senha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberPassword"
@@ -152,13 +154,13 @@
                     android:text="@string/login_n_tem_conta"
                     />
                 <Button
+                    android:id="@+id/btn_novo_user"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/login_criar_conta"
                     android:textColor="@color/pink_500"
                     android:layout_gravity="end"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:textAllCaps="false"
                     />
             </LinearLayout>
         </LinearLayout>
