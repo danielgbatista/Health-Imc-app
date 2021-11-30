@@ -68,8 +68,8 @@ class NovoUsuarioActivity : AppCompatActivity() {
                         diaString = "0$_dia"
                     }
 
-                    Log.i("xxxx", "$diaString/$mesString/$_ano")
-                    editDataNascimento.setText("$diaString/$mesString/$ano")
+                    Log.i("xxxx", "$diaString-$mesString-$_ano")
+                    editDataNascimento.setText("$diaString-$mesString-$ano")
 
                 }, ano, mes, dia)
 

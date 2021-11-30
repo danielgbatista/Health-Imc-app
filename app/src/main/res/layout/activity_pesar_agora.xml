@@ -130,15 +130,17 @@
             android:textSize="7pt"
             />
         <Spinner
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="30dp"
             android:entries="@array/Atividades"
+            android:background="@drawable/spinnerdraw"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:layout_marginTop="5dp"
+
             android:text="Seu novo peso: "
             android:textSize="7pt"
             />
@@ -151,11 +153,22 @@
             >
             <EditText
                 android:id="@+id/edit_nome"
-                android:layout_width="350dp"
+                android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:inputType="textCapSentences"
                 />
-
         </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="Registrar Peso"
+            android:backgroundTint="@color/pink_500"
+            style="@style/button_login"/>
     </LinearLayout>
 </LinearLayout>
