@@ -1,4 +1,4 @@
-package com.example.imccalcapp
+package com.example.imccalcapp.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.imccalcapp.utils.calcularIdade
+import com.example.imccalcapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,12 +29,16 @@ class MainActivity : AppCompatActivity() {
             val senha = arquivo.getString("senha", "")
 
             //validando login
-            if(editEmail.text.toString() == email && editSenha.text.toString() == senha ){
-                val abrirDashBoard = Intent(this, DashBoardActivity::class.java)
-                startActivity(abrirDashBoard)
+            if(editEmail.text.toString() == "" || editSenha.text.toString() == ""){
+                if(editEmail.text.toString() == email && editSenha.text.toString() == senha ){
+                    Toast.makeText(this, "Senha ou E-mail incorretos", Toast.LENGTH_SHORT).show()
+                }else{
+                    val abrirDashBoard = Intent(this, DashBoardActivity::class.java)
+                    startActivity(abrirDashBoard)
+                }
             }
             else{
-                Toast.makeText(this, "Senha ou E-mail incorretos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Digite um E-mail ou senha para entrar", Toast.LENGTH_SHORT).show()
             }
         }
 

@@ -1,4 +1,4 @@
-package com.example.imccalcapp
+package com.example.imccalcapp.view
 
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -9,9 +9,8 @@ import android.view.MenuItem
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Toast
-import androidx.core.view.MenuItemCompat
+import com.example.imccalcapp.R
 import java.util.*
-import kotlin.math.log
 
 class NovoUsuarioActivity : AppCompatActivity() {
     // Criando objeto do tipo EditText

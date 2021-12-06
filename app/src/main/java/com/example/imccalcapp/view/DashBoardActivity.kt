@@ -1,13 +1,12 @@
-package com.example.imccalcapp
+package com.example.imccalcapp.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import com.example.imccalcapp.R
 import com.example.imccalcapp.utils.calcularIdade
 
 class DashBoardActivity : AppCompatActivity() {
@@ -16,7 +15,7 @@ class DashBoardActivity : AppCompatActivity() {
     lateinit var tvProfissao: TextView
     lateinit var tvAltura: TextView
     lateinit var tvIdade: TextView
-    lateinit var rlPesar: RelativeLayout
+    lateinit var crdPesarAgora: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,15 +26,17 @@ class DashBoardActivity : AppCompatActivity() {
         tvProfissao = findViewById(R.id.text_profissao)
         tvAltura = findViewById(R.id.text_altura)
         tvIdade = findViewById(R.id.text_idade)
-        rlPesar =  findViewById(R.id.pesar_agora)
+        crdPesarAgora =  findViewById(R.id.card_pesar_agora)
 
 
 
         preencherDashBoard()
 
-        rlPesar.setOnClickListener {
-            val abrirPeso = Intent(this, PesoActivity::class.java)
-            startActivity(abrirPeso)
+
+        crdPesarAgora.setOnClickListener {
+            val abrirPesagem = Intent(this, PesoActivity::class.java)
+
+            startActivity(abrirPesagem)
         }
     }
     private fun preencherDashBoard(){
